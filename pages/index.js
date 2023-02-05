@@ -20,7 +20,7 @@ export default function Home({dev}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`https://portfolio-api-dr2t.onrender.com/about`)
+  const res = await fetch(`https://portfolio-api-dr2t.onrender.com/api/about/`)
   const data = await res.json()
 
   return {
