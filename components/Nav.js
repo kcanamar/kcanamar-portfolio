@@ -9,7 +9,7 @@ export default function Nav({ name }) {
             
             <div className="left-nav">
                 <Link 
-                    href="#"
+                    href="/"
                     onClick={() => setActive('#')}
                     className={active === '#' ? 'active dev' : "dev"}
                     >

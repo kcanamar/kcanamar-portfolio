@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Link from "next/link"
 
 export default function Hero() {
     
@@ -10,9 +11,15 @@ export default function Hero() {
                     <h4 className="subtitle">Traversing the tech world with self-taught skills combined with a love for coding and professional development. </h4>
 
                     <div className="hero-cards">
-                        <Card title="Projects" subTitle="Check out my projects"/>
-                        <Card title="About" subTitle="Learn more about me"/>
-                        <Card title="Blog" subTitle="Read my blog posts"/>
+                        <Link href="" >
+                            <Card title="Projects" subTitle="Check out my projects"/>
+                        </Link>
+                        <Link href="" >
+                            <Card title="About" subTitle="Learn more about me"/>
+                        </Link>
+                        <Link href="/blog" >
+                            <Card title="Blog" subTitle="Read my blog posts"/>
+                        </Link>
                     </div>
                 </div>
             </div>

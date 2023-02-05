@@ -16,8 +16,7 @@ export default function Landing({dev}) {
 
                 <div className="recent-projects">
                     {dev.projects.slice(0, 4).map((project, idx) => {
-                        const { image, name, live, git } = project
-                        return <Project key={idx} image={image} name={name} live={live} git={git}/>
+                        return <Project key={idx} project={project}/>
                     })}
                 </div>
 
