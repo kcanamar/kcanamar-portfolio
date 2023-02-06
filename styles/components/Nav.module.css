@@ -1,0 +1,32 @@
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    text-decoration: none;
+}
+
+.left a, .right a {
+    font-size: 1.5rem;
+    color: #93CB58;
+    letter-spacing: .05rem;
+}
+
+.right a {
+    margin: auto 1rem;
+}
+
+#active {
+    color: #06BEE1;
+}
+
+
+/* * Hover Effects */
+
+.left a:hover, .right a:hover {
+    color: #06BEE1;
+}
+
+#active:hover{
+    color: #93CB58;
+}

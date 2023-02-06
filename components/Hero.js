@@ -7,7 +7,7 @@ export default function Hero() {
          <section className="hero">
             <div className="container-hero">
                 <div className="hero-intro">
-                    <h1 className="hero-title">Hi, I'm Kyle Canamar</h1>
+                    <h1 className="hero-title">Hello, I&apos;m Kyle Canamar</h1>
                     <h4 className="subtitle">Traversing the tech world with self-taught skills combined with a love for coding and professional development. </h4>
 
                     <div className="hero-cards">

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { useDevContext } from "@/utils/devContext"
+import styles from "../styles/components/Nav.module.css"
 
 export default function Nav() {
     // desructure the value from context
@@ -10,39 +11,47 @@ export default function Nav() {
 
     const [active, setActive] = useState('#')
     return (
-        <nav>
+        <nav className={styles.nav}>
             
-            <div className="left-nav">
+            <div className={styles.left}>
                 <Link 
                     href="/"
                     onClick={() => setActive('#')}
-                    className={active === '#' ? 'active dev' : "dev"}
+                    id={active === '#' ? styles.active : ""}
                     >
                         {name}
                 </Link>
             </div>
-            <div className="right-nav">
+            <div className={styles.right}>
                 <Link 
                     href="#about"
                     onClick={() => setActive('#about')}
-                    className={active === '#about' ? 'active' : ""}
+                    id={active === '#about' ? styles.active : ""}
                     >
                         About
                 </Link>
                 <Link 
                     href="#projects"
                     onClick={() => setActive('#projects')}
-                    className={active === '#projects' ? 'active' : ""}
+                    id={active === '#projects' ? styles.active : ""}
                     >
                         Projects
                 </Link>
                 <Link 
                     href="#contact"
                     onClick={() => setActive('#contact')}
-                    className={active === '#contact' ? 'active' : ""}
+                    id={active === '#contact' ? styles.active : ""}
                     >
                         Contact
                 </Link>
+                <Link 
+                    href="/blog"
+                    onClick={() => setActive('#blog')}
+                    id={active === '#blog' ? styles.active : ""}
+                    >
+                        Blog
+                </Link>
+                {/* Todo link to google pdf view of current resume */}
                 <Link 
                     href=""
                     >
