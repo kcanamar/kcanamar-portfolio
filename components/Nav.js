@@ -1,8 +1,13 @@
 import Link from "next/link"
 import { useState } from "react"
+import { useDevContext } from "@/utils/devContext"
 
+export default function Nav() {
+    // desructure the value from context
+    const { value } = useDevContext()
+    // destructure property needed for component
+    const { name } = value.devContent
 
-export default function Nav({ name }) {
     const [active, setActive] = useState('#')
     return (
         <nav>
