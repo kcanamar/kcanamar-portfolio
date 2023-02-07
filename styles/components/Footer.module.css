@@ -28,6 +28,18 @@
 .copy {
     padding-top: 4rem;
     font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy div {
+    margin: .3rem;
+}
+
+.copy a {
+    margin-left: .2rem;
+    color: #fffdff
 }
 
 /* * Hover Effects */
@@ -36,4 +48,8 @@
     color: #06BEE1;
     box-shadow: 2px 2px 2px 0 #93CB58;
     transition: all 400ms ease;
+}
+
+.copy a:hover {
+    color: #06BEE1;
 }

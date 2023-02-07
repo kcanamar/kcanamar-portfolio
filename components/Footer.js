@@ -4,7 +4,8 @@ import styles from "../styles/components/Footer.module.css"
 import {
     FaLinkedinIn,
     FaGithub,
-    FaTwitter
+    FaTwitter,
+    FaMailBulk
 } from "react-icons/fa"
 
 export default function Footer() {
@@ -15,6 +16,13 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.socials}>
+                <Link 
+                    href="mailto:canamar.kyle@gmail.com"
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                    >
+                        <FaMailBulk/>
+                </Link>
                 <Link 
                     href={git} 
                     rel="noopener noreferrer" 
@@ -38,7 +46,11 @@ export default function Footer() {
                 </Link>
             </div>
             <div className={styles.copy}>
-                <small> © Kcanamar All rights reserved</small>
+                <div>Kyle Canamar</div>
+                <div>©</div>
+                <div>2023</div>
+                <div> • </div>
+                <Link href="/"> KCanamar</Link>
             </div>
         </footer>
     )
