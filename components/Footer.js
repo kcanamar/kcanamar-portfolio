@@ -1,24 +1,45 @@
 import Link from "next/link";
+import { useDevContext } from "@/utils/devContext";
+import styles from "../styles/components/Footer.module.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faGithub,
+    faTwitter,
+    faLinkedinIn
+  } from "@fortawesome/free-brands-svg-icons";
 
+export default function Footer() {
 
-export default function Footer({socials}) {
-
+    const { value } = useDevContext()
+    const { git, linked, twitter} = value.devContent
+    
     return (
-        <section className="footer">
-
-            <ul className="footer-menu">
-                <li><Link href="#">Top</Link></li>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#projects">Projects</Link></li>
-                <li><Link href="#contact">Contact</Link></li>
-                <li><Link href="">Resume</Link></li>
-            </ul>
-            <div className="socials">
-                <Link href={socials.git}>GitHub</Link>
-                <Link href={socials.linked}>LinkedIn</Link>
+        <section className={styles.footer}>
+            <div className={styles.socials}>
+                <Link 
+                    href={git} 
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                    >
+                        <FontAwesomeIcon icon={faGithub} />
+                </Link>
+                <Link 
+                    href={linked} 
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                    >
+                        <FontAwesomeIcon icon={faLinkedinIn} />
+                </Link>
+                <Link 
+                    href={twitter} 
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                    >
+                        <FontAwesomeIcon icon={faTwitter} />
+                </Link>
             </div>
-            <div>
-                <small> © Kcanamar. All rights reserved.</small>
+            <div className={styles.copy}>
+                <small> © Kcanamar All rights reserved</small>
             </div>
         </section>
     )

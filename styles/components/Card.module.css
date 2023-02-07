@@ -1,0 +1,47 @@
+.card {
+    width: 15rem;
+    height: 8rem;
+    border: 2px solid #06BEE1;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 4px 0 #06BEE1;
+}
+
+.content {
+    height: inherit;
+    width: inherit;
+    padding: 1rem;
+}
+
+.title {
+    color: #93CB58;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.6)
+}
+
+.icon {
+    color: #C26717;
+}
+
+/* * Hover Effects */
+
+.card:hover {
+    box-shadow: 4px 4px 4px 0 #C26717;
+    border: 2px solid #C26717;
+    transition: all 400ms ease;
+}
+
+.card:hover .title {
+    color: #06BEE1;
+}
+
+.card:hover .icon {
+    color: #93CB58;
+}

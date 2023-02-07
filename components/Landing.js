@@ -2,9 +2,11 @@ import Hero from "./Hero"
 import { BsArrowRight } from "react-icons/bs"
 import Link from "next/link"
 import Project from "./Project"
+import { useDevContext } from "@/utils/devContext"
 
-export default function Landing({dev}) {
-
+export default function Landing() {
+    const { value } = useDevContext()
+    const { projects } = value.devContent
     return (
         <section className="landing">
             <Hero/>
@@ -15,7 +17,7 @@ export default function Landing({dev}) {
                 </div>
 
                 <div className="recent-projects">
-                    {dev.projects.slice(0, 4).map((project, idx) => {
+                    {projects.slice(0, 4).map((project, idx) => {
                         return <Project key={idx} project={project}/>
                     })}
                 </div>

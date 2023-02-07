@@ -1,0 +1,36 @@
+.footer {
+    background-color: #C26717;
+    margin-top: 2rem;
+    padding: 5rem;
+    text-align: center;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.socials a {
+    margin: auto 2rem;
+    font-size: 2rem;
+    width: 5rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: #93CB58;
+    box-shadow: 2px 2px 2px 0 #06BEE1;
+    background-color: #3A3F42;
+}
+
+.copy {
+    padding-top: 4rem;
+    font-size: 1.25rem;
+}
+
+/* * Hover Effects */
+
+.socials a:hover {
+    color: #06BEE1;
+    box-shadow: 2px 2px 2px 0 #93CB58;
+    transition: all 400ms ease;
+}

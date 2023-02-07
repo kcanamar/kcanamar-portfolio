@@ -25,10 +25,10 @@ body {
 
 :root {
     --main-bg-color: #3A3F42;
-    --main-br-alt: #88B656;
-    --primary-color: #A0C1C9;
-    --primary-alt: #3B646B;
-    --white: #ffffff;
+    --main-br-alt: #93CB58;
+    --primary-color: #06BEE1;
+    --primary-alt: #C26717;
+    --white: #FFFBFE;
     --light: rgba(255, 255, 255, 0.6);
     --transition: all 400ms ease;
     --w-lg: 75%;
