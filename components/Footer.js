@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { useDevContext } from "@/utils/devContext";
 import styles from "../styles/components/Footer.module.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faGithub,
-    faTwitter,
-    faLinkedinIn
-  } from "@fortawesome/free-brands-svg-icons";
+    FaLinkedinIn,
+    FaGithub,
+    FaTwitter
+} from "react-icons/fa"
 
 export default function Footer() {
 
@@ -14,33 +13,33 @@ export default function Footer() {
     const { git, linked, twitter} = value.devContent
     
     return (
-        <section className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.socials}>
                 <Link 
                     href={git} 
                     rel="noopener noreferrer" 
                     target="_blank"
                     >
-                        <FontAwesomeIcon icon={faGithub} />
+                        <FaGithub/>
                 </Link>
                 <Link 
                     href={linked} 
                     rel="noopener noreferrer" 
                     target="_blank"
                     >
-                        <FontAwesomeIcon icon={faLinkedinIn} />
+                        <FaLinkedinIn/>
                 </Link>
                 <Link 
                     href={twitter} 
                     rel="noopener noreferrer" 
                     target="_blank"
                     >
-                        <FontAwesomeIcon icon={faTwitter} />
+                        <FaTwitter/>
                 </Link>
             </div>
             <div className={styles.copy}>
                 <small> © Kcanamar All rights reserved</small>
             </div>
-        </section>
+        </footer>
     )
 }

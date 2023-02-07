@@ -7,10 +7,10 @@ export default function Project({ project }) {
     const {name, image, live, git, stack} = project
 
     return (
-        <div className="container-project">
+        <section className="">
             <div className="">
-                <div className="project-content">
-                    <h2 className="project-title">{name}</h2>
+                <div className="">
+                    <h2 className="">{name}</h2>
                     <div>
                         {stack.map((tech, idx) => {
                             return <h5 key={idx}>{tech}</h5>
@@ -24,11 +24,11 @@ export default function Project({ project }) {
                 <Link href="" target="_blank" rel="noopener noreferrer" >
                     <Image alt={name} src={image} width="544" height="306"/>
                 </Link>
-                <div className="project-actions">
+                <div className="">
                     <Link href={live} target="_blank" rel="noopener noreferrer"><span className="project-cta">Live Site <BsArrowRight/></span></Link>
                     <Link href={git} target="_blank" rel="noopener noreferrer"><span className="project-cta">Git Repo <BsArrowRight/></span></Link>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
