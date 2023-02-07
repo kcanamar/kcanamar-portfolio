@@ -23,18 +23,17 @@ export default function Landing() {
                         <Card title="Blog" subTitle="Read my blog posts"/>
                     </Link>
             </div>
-            <div className="projects">
-                <div className="projects-header">
-                    <h3 className="projects-subtitle">Recent Projects</h3>
-                    <Link href="#projects"><span className="project-cta">All Projects <BsArrowRight/></span></Link>
+            <div className={styles.section}>
+                <div className={styles.container}>
+                    <h3 className={styles.heading}>Recent Projects</h3>
+                    <Link href="#projects"><span className={styles.link}>All Projects</span> <BsArrowRight/></Link>
                 </div>
 
-                <div className="recent-projects">
+                <div className={styles.recent}>
                     {projects.slice(0, 4).map((project, idx) => {
                         return <Project key={idx} project={project}/>
                     })}
                 </div>
-
             </div>
         </section>
     )
