@@ -31,8 +31,10 @@
 
 .left a:hover, .right a:hover {
     color: #06BEE1;
+    transition: all 400ms ease;
 }
 
 #active:hover{
     color: #93CB58;
+    transition: all 400ms ease;
 }

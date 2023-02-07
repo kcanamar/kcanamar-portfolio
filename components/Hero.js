@@ -11,10 +11,10 @@ export default function Hero() {
                     <h4 className="subtitle">Traversing the tech world with self-taught skills combined with a love for coding and professional development. </h4>
 
                     <div className="hero-cards">
-                        <Link href="" >
+                        <Link href="#projects" >
                             <Card title="Projects" subTitle="Check out my projects"/>
                         </Link>
-                        <Link href="" >
+                        <Link href="#about" >
                             <Card title="About" subTitle="Learn more about me"/>
                         </Link>
                         <Link href="/blog" >
