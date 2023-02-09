@@ -33,3 +33,16 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@media (max-width: 600px) {
+    .cards {
+        display: grid;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+    .recent {
+        display: grid;
+    }
+}

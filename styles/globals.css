@@ -56,7 +56,3 @@ body {
         width: var(--w-s);
     }
 }
-/* Important add due to webpacking */
-.hero-title {
-    font-size: 2rem;
-}
