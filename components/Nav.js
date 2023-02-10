@@ -11,37 +11,10 @@ export default function Nav() {
     // destructure property needed for component
     const { name } = value.devContent
 
-    const [active, setActive] = useState({
-        visible: "",
-        show: false,
-        mobile: false,
-        star: ""
-    })
-
-    const MenuHandler = () => {
-        if (active.visible === "") {
-            setActive({
-                visible: "true",
-                show: true
-            })
-        } else {
-            setActive({
-                visible: "",
-                show: false
-            })
-        }
-
-    }
-
-    const LinkHandler = (event) => {
-        if (active.visible === "true" || active.show === true) {
-            setActive({
-                visible: "",
-                show: false
-            })
-        }
-
-    }
+    // Menu State
+    const [showMenu, setShowMenu] = useState("false")
+    const MenuHandler = () => (showMenu === "false") ? setShowMenu("true") : setShowMenu("false")
+    const LinkHandler = () => {if (showMenu === "true") setShowMenu("false")}
 
     return (
         <header className={styles.header}>
@@ -56,18 +29,18 @@ export default function Nav() {
 
             <button 
                 className={styles.navToggle}
-                data-visible={active.visible}
+                data-visible={showMenu}
                 onClick={() => MenuHandler()}
             >
-                {active.show ? <MdClose/> : <FiMenu/> }
+                {showMenu === "true" ? <MdClose/> : <FiMenu/> }
             </button>
 
 
             <ul 
                 className={styles.primaryNav}
-                data-visible={active.visible}
+                data-visible={showMenu}
             >
-                <li >
+                <li>
                     <Link
                         href="/about"
                         onClick={() => LinkHandler()}
