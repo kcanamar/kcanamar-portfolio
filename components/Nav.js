@@ -11,43 +11,37 @@ export default function Nav() {
 
     const [active, setActive] = useState('#')
     return (
-        <nav className={styles.nav}>
+        <header className={styles.header}>
             
             <div className={styles.left}>
                 <Link 
                     href="/"
-                    onClick={() => setActive('#')}
-                    id={active === '#' ? styles.active : ""}
                     >
                         {name}
                 </Link>
             </div>
+
+            <button></button>
+
+
             <div className={styles.right}>
                 <Link 
-                    href="#about"
-                    onClick={() => setActive('#about')}
-                    id={active === '#about' ? styles.active : ""}
+                    href="/about"
                     >
                         About
                 </Link>
                 <Link 
-                    href="#projects"
-                    onClick={() => setActive('#projects')}
-                    id={active === '#projects' ? styles.active : ""}
+                    href="/projects"
                     >
                         Projects
                 </Link>
                 <Link 
-                    href="#contact"
-                    onClick={() => setActive('#contact')}
-                    id={active === '#contact' ? styles.active : ""}
+                    href="/contact"
                     >
                         Contact
                 </Link>
                 <Link 
                     href="/blog"
-                    onClick={() => setActive('#blog')}
-                    id={active === '#blog' ? styles.active : ""}
                     >
                         Blog
                 </Link>
@@ -59,6 +53,6 @@ export default function Nav() {
                 </Link>
             </div>
 
-        </nav>
+        </header>
     )
 }
