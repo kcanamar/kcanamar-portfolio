@@ -1,72 +1,82 @@
-.container {
-    width: 47%;
-    border: 3px solid #06BEE1;
-    box-shadow: 8px 8px 15px 0 #06BEE1;
+
+.project {
+    height: 100%;
+    overflow-x: hidden;
     border-radius: 1rem;
-    padding: 1rem;
+    text-align: center;
+    outline: 5px solid var(--primary-color);
+    box-shadow: 0px 4px 8px 5px var(--primary-color);
+}
+
+.img {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.img img {
+    border-radius: 0.5rem;
 }
 
 .title {
-    color: #93CB58;
-    letter-spacing: .1rem;
-    font-size: 1.8rem;
-    cursor: default;
-}
-
-.content {
+    color: var(--white);
     margin-top: 1rem;
-    text-align: center;
-    padding: 0rem 2rem 0rem 2rem;
 }
 
 .stack {
     display: flex;
     justify-content: center;
-    margin-top: .5rem;
+    gap: .5rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .tech {
-    color: #C26717;
-    border: 2px solid #C26717;
+    border: 2px solid var(--primary-alt);
+    color: var(--light);
+    padding: .3rem;
     border-radius: .5rem;
-    padding: .5rem;
-    letter-spacing: .05rem;
+    letter-spacing: .03rem;
 }
 
 .desc {
-    padding: 1rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.img {
-    overflow: scroll;
+    padding-inline: 4rem;
 }
 
 .links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin: 1rem auto;
 }
 
 .link {
     display: flex;
     align-items: center;
-    color: #93CB58;
+    color: var(--primary-alt);
 }
 
 .link span {
-    margin-right: .5rem;
+    padding-inline: .5rem;
+    color: var(--main-br-alt);
 }
 
-.link svg {
-    color: #C26717;
+/* * Media Queries */
+@media (max-width: 40em){
+    .stack {
+        flex-wrap: wrap;
+    }
+
+    .desc {
+        padding-inline: 1rem;
+    }
 }
 
-/* * Hover */
+@media (min-width: 40em) and (max-width: 70em){
+    .desc {
+        padding-inline: 2rem;
+    }
+}
 
-.link:hover {
-    color: #06BEE1;
+@media (min-width: 70em) {
+
 }

@@ -2,6 +2,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { useDevContext } from "@/utils/devContext"
 import styles from "../styles/components/Nav.module.css"
+import { FiMenu } from "react-icons/fi"
+import { MdClose } from "react-icons/md"
 
 export default function Nav() {
     // desructure the value from context
@@ -9,56 +11,79 @@ export default function Nav() {
     // destructure property needed for component
     const { name } = value.devContent
 
-    const [active, setActive] = useState('#')
+    // Menu State
+    const [showMenu, setShowMenu] = useState("false")
+    const MenuHandler = () => (showMenu === "false") ? setShowMenu("true") : setShowMenu("false")
+    const LinkHandler = () => {if (showMenu === "true") setShowMenu("false")}
+
     return (
-        <nav className={styles.nav}>
+        <header className={styles.header}>
             
-            <div className={styles.left}>
+            <div className={styles.logo}>
                 <Link 
                     href="/"
-                    onClick={() => setActive('#')}
-                    id={active === '#' ? styles.active : ""}
                     >
                         {name}
                 </Link>
             </div>
-            <div className={styles.right}>
-                <Link 
-                    href="#about"
-                    onClick={() => setActive('#about')}
-                    id={active === '#about' ? styles.active : ""}
-                    >
-                        About
-                </Link>
-                <Link 
-                    href="#projects"
-                    onClick={() => setActive('#projects')}
-                    id={active === '#projects' ? styles.active : ""}
-                    >
-                        Projects
-                </Link>
-                <Link 
-                    href="#contact"
-                    onClick={() => setActive('#contact')}
-                    id={active === '#contact' ? styles.active : ""}
-                    >
-                        Contact
-                </Link>
-                <Link 
-                    href="/blog"
-                    onClick={() => setActive('#blog')}
-                    id={active === '#blog' ? styles.active : ""}
-                    >
-                        Blog
-                </Link>
-                {/* Todo link to google pdf view of current resume */}
-                <Link 
-                    href=""
-                    >
-                        Resume
-                </Link>
-            </div>
 
-        </nav>
+            <button 
+                className={styles.navToggle}
+                data-visible={showMenu}
+                onClick={() => MenuHandler()}
+            >
+                {showMenu === "true" ? <MdClose/> : <FiMenu/> }
+            </button>
+
+
+            <ul 
+                className={styles.primaryNav}
+                data-visible={showMenu}
+            >
+                <li>
+                    <Link
+                        href="/about"
+                        onClick={() => LinkHandler()}
+
+                        >
+                            About
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/projects"
+                        onClick={() => LinkHandler()}
+                        >
+                            Projects
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/contact"
+                        onClick={() => LinkHandler()}
+                        >
+                            Contact
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/blog"
+                        onClick={() => LinkHandler()}
+                        >
+                            Blog
+                    </Link>
+                </li>
+                {/* Todo link to google pdf view of current resume */}
+                <li>
+                    <Link
+                        href=""
+                        // todo need a handler to close menu after download
+                        >
+                            Resume
+                    </Link>
+                </li>
+            </ul>
+
+        </header>
     )
 }

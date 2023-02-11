@@ -27,7 +27,7 @@
 
 .copy {
     padding-top: 4rem;
-    font-size: 1.25rem;
+    font-size: clamp(.8rem, 1.5vw, 2rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,4 +52,28 @@
 
 .copy a:hover {
     color: #06BEE1;
+}
+
+/* * Media Queries */
+
+@media (max-width: 40em){
+    .socials a {
+        margin: auto .5rem;
+        font-size: 1.5rem;
+        height: 3rem;
+        padding: .5rem
+    }
+}
+
+@media (min-width: 40em) and (max-width: 70em){
+    .socials a {
+        margin: auto 1.5rem;
+        font-size: 2rem;
+        height: 5rem;
+        padding: 1.5rem
+    }
+}
+
+@media (min-width: 70em) {
+
 }

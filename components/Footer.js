@@ -17,7 +17,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.socials}>
                 <Link 
-                    href="mailto:canamar.kyle@gmail.com"
+                    href="/contact"
                     rel="noopener noreferrer" 
                     target="_blank"
                     >

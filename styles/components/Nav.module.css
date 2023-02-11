@@ -1,40 +1,160 @@
-
-.nav {
+.header {
     display: flex;
-    justify-content: space-between;
-    margin: 0rem auto;
-    text-decoration: none;
-    width: 75%;
-    height: 6rem;
+    gap: var(--gap, 2rem);
     align-items: center;
-    /* position: sticky;
-    top: 0; */
-    background-color: #3A3F42;
+    justify-content: space-between;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
-.left a, .right a {
-    font-size: 1.5rem;
-    color: #93CB58;
-    letter-spacing: .05rem;
+.logo {
+    margin: 2rem;
 }
 
-.right a {
-    margin: auto 1rem;
+.logo a {
+    color: var(--main-br-alt);
+    letter-spacing: .1rem;
 }
 
-#active {
-    color: #06BEE1;
+.navToggle {
+    display: none;
 }
 
-
-/* * Hover Effects */
-
-.left a:hover, .right a:hover {
-    color: #06BEE1;
-    transition: all 400ms ease;
+.primaryNav {
+    list-style: none;
+    display: flex;
+    gap: var(--gap, 1rem);
 }
 
-#active:hover{
-    color: #93CB58;
-    transition: all 400ms ease;
+@supports (backdrop-filter: blur(1rem)) {
+    .primaryNav {
+        background-color: hsl(0, 0%, 100% / 0.2);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+.primaryNav a {
+    text-decoration: none;
+    color: var(--main-br-alt);
+    letter-spacing: .1rem;
+}
+
+/* * Hover */
+.logo a:hover, .primaryNav a:hover  {
+    color: var(--primary-color);
+}
+
+/* * Media Queries */
+
+/* Mobile */
+@media (max-width: 40em) {
+    .header {
+        position: sticky;
+        top: 0;
+        background: hsl(0 0% 0% / 0.75);
+    }
+
+    .primaryNav {
+        --gap: 3em;
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1000;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        transform: translatex(100%);
+        transition: transform 400ms ease;
+        background: hsl(0 0% 0% / 0.75);
+
+    }
+
+    .primaryNav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .primaryNav a {
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+    }
+
+    .navToggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border-radius: .5rem;
+    }
+
+    .navToggle[data-visible="false"] {
+        background-color: var(--main-br-alt);
+        font-size: 1rem;
+    }
+
+    .navToggle[data-visible="true"] {
+        background-color: red;
+        font-size: 1rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 40em) and (max-width: 70em){
+    .header {
+        position: sticky;
+        top: 0;
+        background: hsl(0 0% 0% / 0.75);
+    }
+    
+    .primaryNav {
+        --gap: 3em;
+        position: fixed;
+        inset: 0 0 0 50%;
+        z-index: 1000;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        transform: translatex(100%);
+        transition: transform 400ms ease;
+        background: hsl(0 0% 0% / 0.9);
+    }
+
+    .primaryNav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .primaryNav a {
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+    }
+
+    .navToggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border-radius: .5rem;
+    }
+
+    .navToggle[data-visible="false"] {
+        background-color: var(--main-br-alt);
+        font-size: 1rem;
+    }
+
+    .navToggle[data-visible="true"] {
+        background-color: red;
+        font-size: 1rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 70em){
+    .primaryNav, .logo {
+        --gap: clamp(1.5rem, 5vw, 3rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 5vw, 10rem);
+    }
 }

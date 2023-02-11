@@ -1,5 +1,5 @@
 .card {
-    width: 15rem;
+    width: clamp(12rem, 20vw, 15rem);
     height: 8rem;
     border: 2px solid #06BEE1;
     border-radius: 1rem;
@@ -44,4 +44,19 @@
 
 .card:hover .icon {
     color: #93CB58;
+}
+
+/* * Media Queries */
+
+@media (max-width: 40em){
+    .card {
+        width: clamp(15rem, 20vw, 15rem);
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 40em) and (max-width: 70em){
+    .subtitle {
+        font-size: .9rem;
+    }
 }
