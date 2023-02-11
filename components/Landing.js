@@ -58,15 +58,13 @@ export default function Landing() {
                 <div className={styles.containerBtm}>
                     <div className={styles.top}>
                         <h3 className={styles.heading}>Recent Projects</h3>
-                        <Link href="#projects"><span className={styles.link}>All Projects</span> <BsArrowRight/></Link>
+                        <Link href="/projects"><span className={styles.link}>All Projects</span> <BsArrowRight/></Link>
                     </div>
 
                     <div className={styles.bottom}>
-                        <div className={styles.recent}>
-                            {projects.slice(0, 4).map((project, idx) => {
+                        {projects.slice(0, 4).map((project, idx) => {
                                 return <Project key={idx} project={project}/>
-                            })}
-                        </div>
+                        })}
                     </div>
                 </div>
             </section>

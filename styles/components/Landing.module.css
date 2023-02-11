@@ -1,6 +1,7 @@
 /* * Hero  */
 .section {
-    margin-bottom: 3rem;
+    margin-inline: auto;
+    margin-bottom: 5rem;
 }
 .containerTop {
     display: grid;
@@ -48,15 +49,16 @@
     }
     .right img {
         padding: .5rem;
-        width: 420px;
-        height: 380px;
+        width: 300px;
+        height: 280px;
+
     }
 }
 
 /* Tablet */
 @media (min-width: 40em) and (max-width: 70em){
     .section {
-        margin: 7rem auto;
+        margin: 5rem auto;
     }
     .right img {
         width: 420px;
@@ -98,6 +100,7 @@
          "a . b"
          ". c ."
         ;
+        margin-top: 10rem;
     }
 
     .cardA {
@@ -115,16 +118,55 @@
 
 
 /* ? Projects */
+.containerBtm {
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.top a {
+    display: flex;
+    align-items: center;
+    color: var(--main-br-alt);
+}
+
+.top span {
+    margin-inline: .5rem;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+/* * Hover Effects */
+.top a:hover {
+    color: var(--primary-color);
+}
 
 
 /* ? Media Queries Projects */
 
 @media (max-width: 40em){
-
+    .bottom{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
 }
 
 @media (min-width: 40em) and (max-width: 70em){
 
+    .bottom {
+        grid-template-columns: 1fr;
+        padding: 6rem;
+        gap: 4rem;
+    }
 }
 
 @media (min-width: 70em) {

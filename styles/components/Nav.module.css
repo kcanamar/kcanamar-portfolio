@@ -19,8 +19,6 @@
     display: none;
 }
 
-
-
 .primaryNav {
     list-style: none;
     display: flex;
@@ -49,6 +47,12 @@
 
 /* Mobile */
 @media (max-width: 40em) {
+    .header {
+        position: sticky;
+        top: 0;
+        background: hsl(0 0% 0% / 0.75);
+    }
+
     .primaryNav {
         --gap: 3em;
         position: fixed;
@@ -96,6 +100,12 @@
 
 /* Tablet */
 @media (min-width: 40em) and (max-width: 70em){
+    .header {
+        position: sticky;
+        top: 0;
+        background: hsl(0 0% 0% / 0.75);
+    }
+    
     .primaryNav {
         --gap: 3em;
         position: fixed;
