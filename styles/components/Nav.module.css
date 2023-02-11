@@ -84,7 +84,7 @@
     }
 
     .navToggle[data-visible="false"] {
-        color: var(--main-br-alt);
+        background-color: var(--main-br-alt);
         font-size: 1rem;
     }
 
@@ -95,7 +95,7 @@
 }
 
 /* Tablet */
-@media (min-width: 40em) and (max-width: 65em){
+@media (min-width: 40em) and (max-width: 70em){
     .primaryNav {
         --gap: 3em;
         position: fixed;
@@ -130,7 +130,7 @@
     }
 
     .navToggle[data-visible="false"] {
-        color: var(--main-br-alt);
+        background-color: var(--main-br-alt);
         font-size: 1rem;
     }
 
@@ -141,7 +141,7 @@
 }
 
 /* Desktop */
-@media (min-width: 65em){
+@media (min-width: 70em){
     .primaryNav, .logo {
         --gap: clamp(1.5rem, 5vw, 3rem);
         padding-block: 2rem;

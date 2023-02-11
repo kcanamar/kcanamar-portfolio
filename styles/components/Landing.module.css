@@ -1,0 +1,132 @@
+/* * Hero  */
+.section {
+    margin-bottom: 3rem;
+}
+.containerTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.right {
+    text-align: center;
+    padding: 1rem;
+}
+
+.preTitle, .subTitle{
+    font-size: clamp(1rem, 1.5vw, 2.5rem);
+    color: var(--light);
+}
+
+.title{
+    font-size: clamp(2rem, 2.5vw, 4rem);
+}
+
+/* * Media Queries Hero */
+
+/* Mobile */
+@media (max-width: 40em) {
+    .section {
+        margin-bottom: 5rem;
+    }
+
+    .containerTop{
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        text-align: center;
+    }
+    .right {
+        text-align: center;
+    }
+    .right img {
+        padding: .5rem;
+        width: 420px;
+        height: 380px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 40em) and (max-width: 70em){
+    .section {
+        margin: 7rem auto;
+    }
+    .right img {
+        width: 420px;
+        height: 380px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 70em) {
+    .right {
+        display: flex;
+        justify-content: center;
+        width: clamp(550px, 30vw, 1000px);
+    }
+
+}
+
+/* ! Call To Actions */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cardA, .cardB, .cardC {
+    display: flex;
+    justify-content: center;
+}
+
+/* ! Media Queries for CTA's */
+@media (max-width: 40em){
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 40em) and (max-width: 70em){
+    .cards {
+        grid-template-areas:
+         "a . b"
+         ". c ."
+        ;
+    }
+
+    .cardA {
+        grid-area: a;
+    }
+
+    .cardB {
+        grid-area: c;
+    }
+
+    .cardC {
+        grid-area: b;
+    }
+}
+
+
+/* ? Projects */
+
+
+/* ? Media Queries Projects */
+
+@media (max-width: 40em){
+
+}
+
+@media (min-width: 40em) and (max-width: 70em){
+
+}
+
+@media (min-width: 70em) {
+
+}
