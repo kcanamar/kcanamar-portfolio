@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import Landing from '@/components/Landing'
+import { devLoader } from '@/utils/devLoader'
 import dbConnect from '@/utils/dbConnect'
 import About from '@/models/about'
+import Project from '@/models/project'
 
 
 export default function Home() {
@@ -38,6 +40,8 @@ export async function getServerSideProps() {
   /* find all the data in our database */
   const result = await About.find({}).populate("projects")
   const dev = JSON.parse(JSON.stringify(result[0]))
+
+  const result2 = await Project.find({}).populate("stack")
 
   return { props: { dev } }
 }
