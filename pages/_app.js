@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
   // Store dev as state for the DevProvider
   const [devContent] = useState(dev)
 
-  const loading = () => <h1>Loading....</h1>
+  const loading = () => <h1>loading...</h1>
 
   const loaded = () => {
     return (
