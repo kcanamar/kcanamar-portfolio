@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import Landing from '@/components/Landing'
-import { devLoader } from '@/utils/devLoader'
+import dbConnect from '@/utils/dbConnect'
+import About from '@/models/about'
 
 
-export default function Home({dev}) {
+export default function Home() {
 
   return (
     <>
@@ -20,10 +21,23 @@ export default function Home({dev}) {
   )
 }
 
-export async function getStaticProps() {
-  const data = await devLoader()
+// * Fetching from an external api
+// export async function getStaticProps() {
+//   const data = await devLoader()
 
-  return {
-      props: { dev: data }
-  }
+//   return {
+//       props: { dev: data }
+//   }
+// }
+
+// * Fetching directly from the database
+/* Retrieves dev(s) data from mongodb database */
+export async function getServerSideProps() {
+  await dbConnect()
+
+  /* find all the data in our database */
+  const result = await About.find({}).populate("projects")
+  const dev = JSON.parse(JSON.stringify(result[0]))
+
+  return { props: { dev } }
 }
