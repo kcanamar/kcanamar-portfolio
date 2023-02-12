@@ -42,6 +42,15 @@ export default function Nav() {
             >
                 <li>
                     <Link
+                        href="/"
+                        onClick={() => LinkHandler()}
+
+                        >
+                            Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         href="/about"
                         onClick={() => LinkHandler()}
 
