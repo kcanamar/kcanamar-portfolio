@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Layout from '@/components/Layout'
 import Landing from '@/components/Landing'
 import { devLoader } from '@/utils/devLoader'
-import dbConnect from '@/utils/dbConnect'
-import About from '@/models/about'
-import Project from '@/models/project'
+// import dbConnect from '@/utils/dbConnect'
+// import About from '@/models/about'
+// import Project from '@/models/project'
 
 
 export default function Home() {
@@ -24,24 +24,24 @@ export default function Home() {
 }
 
 // * Fetching from an external api
-// export async function getStaticProps() {
-//   const data = await devLoader()
+export async function getStaticProps() {
+  const data = await devLoader()
 
-//   return {
-//       props: { dev: data }
-//   }
-// }
+  return {
+      props: { dev: data }
+  }
+}
 
 // * Fetching directly from the database
 /* Retrieves dev(s) data from mongodb database */
-export async function getServerSideProps() {
-  await dbConnect()
+// export async function getServerSideProps() {
+//   await dbConnect()
 
-  /* find all the data in our database */
-  const result = await About.find({}).populate("projects")
-  const dev = JSON.parse(JSON.stringify(result[0]))
+//   /* find all the data in our database */
+//   const result = await About.find({}).populate("projects")
+//   const dev = JSON.parse(JSON.stringify(result[0]))
 
-  const result2 = await Project.find({}).populate("stack")
+//   const result2 = await Project.find({}).populate("stack")
 
-  return { props: { dev } }
-}
+//   return { props: { dev } }
+// }
