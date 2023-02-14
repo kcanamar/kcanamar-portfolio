@@ -1,12 +1,12 @@
 .section {
     margin: 3rem auto;
+    text-align: center;
 }
 
 .containerTop, .containerMid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
-    gap: 2rem;
     align-items: center;
 }
 
@@ -20,10 +20,31 @@
 .img img {
     border-radius: 1rem;
     box-shadow: 0px 0px 12px 4px black;
+
+}
+
+.bio {
+    margin: 1rem auto;
+    padding: 2rem;
+    text-align: left;
+}
+
+.head {
+    font-size: 2rem;
+    color: var(--primary-color);
 }
 
 .why {
-    text-align: right;
+    margin: 1rem auto;
+    padding: 2rem;
+    text-align: left;
+    
+}
+
+.subheading {
+    margin: 2rem;
+    font-size: 3rem;
+    color: var(--primary-alt);
 }
 
 .containerBtm {
@@ -37,10 +58,6 @@
     gap: 1rem;
 }
 
-.subheading {
-    margin: 2rem;
-    font-size: 3rem;
-}
 
 
 
@@ -76,7 +93,6 @@
     .containerTop, .containerMid {
         grid-template-columns: 1fr;
         padding: 1rem;
-        gap: 3rem;
     }
 
     .talents {
@@ -93,7 +109,7 @@
 
     .containerTop, .containerMid {
         padding: 2rem;
-        gap: 4rem;
+        gap: 1rem;
     }
 
 }
