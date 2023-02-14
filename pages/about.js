@@ -1,12 +1,25 @@
 import dbConnect from '@/utils/dbConnect'
 import AboutInfo from '@/models/about'
 import ProjectInfo from '@/models/project'
+import TalentInfo from '@/models/talent'
 import styles from "../styles/About.module.css"
-import Link from 'next/link'
 import { CldImage } from 'next-cloudinary'
 import Talent from '@/components/about/talent'
+import {
+    SiMongodb,
+    SiExpress,
+    SiNodedotjs,
+    SiReact,
+    SiHtml5,
+    SiJavascript,
+    SiCss3,
+    SiPostgresql,
+    SiNextdotjs,
+    SiPython,
+    SiDjango
+} from "react-icons/si"
 
-export default function About() {
+export default function About({ talents }) {
 
     return (
         <section className={styles.section}>    
@@ -66,18 +79,18 @@ export default function About() {
             <div className={styles.containerBtm}>
                 <h1 className={styles.subheading}>Technology Toolbox</h1>
                 <div className={styles.talents}>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
-                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    {
+                        talents.map((talent, idx) => {
+                            const {title, desc, link, icon} = talent
+                            return <Talent 
+                                key={idx} 
+                                title={title} 
+                                desc={desc} 
+                                link={link} 
+                                icon={icon}
+                            />
+                        })
+                    }
                     
                 </div>
             </div>
@@ -94,6 +107,9 @@ export async function getServerSideProps() {
 
     const result2 = await ProjectInfo.find({}).populate("stack")
     const projects = JSON.parse(JSON.stringify(result2))
+
+    const result3 = await TalentInfo.find({})
+    const talents = JSON.parse(JSON.stringify(result3))
   
-    return { props: { dev, projects } }
+    return { props: { dev, projects, talents } }
   }
