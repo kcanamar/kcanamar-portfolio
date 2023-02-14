@@ -1,10 +1,10 @@
 import dbConnect from '@/utils/dbConnect'
 import AboutInfo from '@/models/about'
+import ProjectInfo from '@/models/project'
 import styles from "../styles/About.module.css"
 import Link from 'next/link'
-import Image from 'next/image'
-import BioPic from "../public/us-xmas-22.jpg"
-import WhyPic from "../public/my-why.jpeg"
+import { CldImage } from 'next-cloudinary'
+import Talent from '@/components/about/talent'
 
 export default function About() {
 
@@ -12,10 +12,18 @@ export default function About() {
         <section className={styles.section}>    
             <div className={styles.containerTop}>
                 <div className={styles.img}>
-                    <Image 
-                        src={BioPic} 
-                        alt=""
-                        height="700"
+                    <CldImage
+                        src="https://res.cloudinary.com/kcanamar/image/upload/v1676337247/portfolio/us-xmas-22_ebcu7n.jpg" 
+                        alt="Kyle and his wife Jaime, in their home during christmas of 2022"
+                        height="400"
+                        width="300"
+                        sizes=" (min-width: 480px) 50vw
+                                (min-width: 768px) 33vw,
+                                (min-width: 1200px) 25vw,
+                                100vw"
+                        loading="lazy"
+                        crop="thumb"
+                        gravity="center"
                     />
                 </div>
 
@@ -31,76 +39,37 @@ export default function About() {
                 </div>
 
                 <div className={styles.img}>
-                    <Image 
-                        src={WhyPic} 
-                        alt=""
-                        height="700"
+                    <CldImage 
+                        src="https://res.cloudinary.com/kcanamar/image/upload/v1676337312/portfolio/Family_mzofoy.jpg"
+                        alt="Kyle with his wife and kids by the waterfront in Tacoma, Washington"
+                        height="400"
+                        width="300"
+                        sizes=" (min-width: 480px) 50vw
+                                (min-width: 768px) 33vw,
+                                (min-width: 1200px) 25vw,
+                                100vw"
+                        loading="lazy"
+                        crop="thumb"
+                        gravity="center"
                     />
                 </div>
             </div>
             <div className={styles.containerBtm}>
-                <h1 className={styles.subheading}>Talents</h1>
+                <h1 className={styles.subheading}>Technology Toolbox</h1>
                 <div className={styles.talents}>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
-                    <article className={styles.talent}>
-                        <h4 className={styles.thead}>Example</h4>
-                        <p className={styles.desc}>Flexible interpreted language best known for breathing life into the DOM</p>
-                        <Link href="" className={styles.btn}>View the Docs</Link>
-                    </article>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    <Talent title="Example" desc="Flexible interpreted language best known for breathing life into the DOM" link=""/>
+                    
                 </div>
             </div>
         </section>
@@ -113,6 +82,9 @@ export async function getServerSideProps() {
     /* find all the data in our database */
     const result = await AboutInfo.find({}).populate("projects")
     const dev = JSON.parse(JSON.stringify(result[0]))
+
+    const result2 = await ProjectInfo.find({}).populate("stack")
+    const projects = JSON.parse(JSON.stringify(result2))
   
-    return { props: { dev } }
+    return { props: { dev, projects } }
   }
