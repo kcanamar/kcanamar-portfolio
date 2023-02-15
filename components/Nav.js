@@ -1,17 +1,13 @@
 import Link from "next/link"
 import { useState } from "react"
-import { useDevContext } from "@/utils/devContext"
 import styles from "../styles/components/Nav.module.css"
 import { FiMenu } from "react-icons/fi"
 import { MdClose } from "react-icons/md"
 import useDownloader from "react-use-downloader"
 
-export default function Nav() {
-    // desructure the value from context
-    const { value } = useDevContext()
-    // destructure property needed for component
-    const { name } = value.devContent
+export default function Nav({dev}) {
 
+    const { name } = dev
     // Resume download setup
     const { download } = useDownloader()
     const fileUrl = "/CV.pdf"
@@ -80,14 +76,16 @@ export default function Nav() {
                             Contact
                     </Link>
                 </li>
-                <li>
+
+                {/* Relocating Blog to its own site */}
+                {/* <li>
                     <Link
                         href="/blog"
                         onClick={() => LinkHandler()}
                         >
                             Blog
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link
                         href=""

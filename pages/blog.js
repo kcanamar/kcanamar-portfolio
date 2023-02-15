@@ -7,21 +7,21 @@ export default function Blog({posts, dev}){
         <Layout dev={dev}>
             <h1>Blog coming soon!</h1>
             {posts.map((post, idx) => {
-            //extract slug and frontmatter
-            const {slug, frontmatter} = post
-            //extract frontmatter properties
-            const {title, author, category, date, bannerImage, tags} = frontmatter
+                //extract slug and frontmatter
+                const {slug, frontmatter} = post
+                //extract frontmatter properties
+                const {title, author, category, date, bannerImage, tags} = frontmatter
 
-            return (
-                <div key={idx}>
-                    <Link href={`/posts/${slug}`}>
-                        <h1>{title}</h1>
-                    </Link>
-                    <h3>{author}</h3>
-                    <h3>{date}</h3>
-                </div>
-            )
-        })}
+                return (
+                    <div key={idx}>
+                        <Link href={`/posts/${slug}`}>
+                            <h1>{title}</h1>
+                        </Link>
+                        <h3>{author}</h3>
+                        <h3>{date}</h3>
+                    </div>
+                )
+            })}
         </Layout>
     )
 }

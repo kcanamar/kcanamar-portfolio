@@ -7,9 +7,8 @@ import Card from "./Card"
 import Image from "next/image"
 import profilePic from "../public/pic.png"
 
-export default function Landing() {
-    const { value } = useDevContext()
-    const { projects } = value.devContent
+export default function Landing({dev}) {
+    const { projects } = dev
     return (
         <div className="landing">
             <section className={styles.section}>

@@ -4,14 +4,17 @@ import ProjectInfo from '@/models/project'
 import TalentInfo from '@/models/talent'
 import ContactForm from "@/components/ContactForm"
 import styles from "@/styles/Contact.module.css"
+import Layout from '@/components/Layout'
 
-export default function Contact() {
+export default function Contact({ dev }) {
 
     return (
-        <section className={styles.section}>
-            <h1 className={styles.head}>Get In Touch</h1>
-            <ContactForm />
-        </section>
+        <Layout dev={dev}>
+            <section className={styles.section}>
+                <h1 className={styles.head}>Get In Touch</h1>
+                <ContactForm />
+            </section>
+        </Layout>
     )
 }
 

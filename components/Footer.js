@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useDevContext } from "@/utils/devContext";
 import styles from "../styles/components/Footer.module.css"
 import {
     FaLinkedinIn,
@@ -8,10 +7,9 @@ import {
     FaMailBulk
 } from "react-icons/fa"
 
-export default function Footer() {
+export default function Footer({dev}) {
 
-    const { value } = useDevContext()
-    const { git, linked, twitter} = value.devContent
+    const { git, linked, twitter} = dev
     
     return (
         <footer className={styles.footer}>
