@@ -5,6 +5,7 @@
 .head {
     font-size: 2rem;
     text-align: center;
+    color: var(--primary-alt);
 }
 
 @media (max-width: 40em) {
@@ -17,7 +18,7 @@
 @media (min-width: 40em) and (max-width: 70em) {
     .section {
         width: var(--w-md);
-        padding-inline: 10vw;
+        padding-inline: 5vw;
     }
 
 }
@@ -25,7 +26,7 @@
 @media (min-width: 70em) {
     .section {
         width: var(--w-lg);
-        padding-inline: 20vw;
+        padding-inline: 10vw;
     }
 
 }

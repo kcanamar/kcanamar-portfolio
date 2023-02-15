@@ -123,6 +123,10 @@
     padding: 1rem;
 }
 
+.heading{
+    color: var(--primary-alt);
+}
+
 .top {
     display: flex;
     justify-content: space-between;

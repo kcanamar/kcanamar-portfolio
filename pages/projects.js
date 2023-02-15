@@ -4,22 +4,25 @@ import ProjectInfo from '@/models/project'
 import TalentInfo from '@/models/talent'
 import Project from '@/components/Project'
 import styles from '../styles/Projects.module.css'
+import Layout from '@/components/Layout'
 
-export default function Projects({ projects }) {
+export default function Projects({ projects, dev }) {
 
     return (
-        <section className={styles.section}>
-            <div className={styles.container}>
-                <h1 className={styles.subHead}>Projects Gallery</h1>
-                <div className={styles.gallery}>
-                    {
-                        projects.map((project, idx) => {
-                            return <Project key={idx} project={project} />
-                        })
-                    }
+        <Layout dev={dev}>
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <h1 className={styles.subHead}>Projects Gallery</h1>
+                    <div className={styles.gallery}>
+                        {
+                            projects.map((project, idx) => {
+                                return <Project key={idx} project={project} />
+                            })
+                        }
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Layout>
     )
 }
 
