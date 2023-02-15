@@ -10,6 +10,7 @@ export default function Talent(props) {
         <Link href={link} target="_blank" rel="noopener norefferer" className={styles.talent}>
             <h4 className={styles.thead}>{title} <DynamicSiIcon name={icon} /></h4>
             <p className={styles.desc}>{desc}</p>
+            <p className={styles.btn}>To Learn More</p>
         </Link>
     )
 }
