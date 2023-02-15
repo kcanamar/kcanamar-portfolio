@@ -12,6 +12,7 @@ export default function Nav() {
     // destructure property needed for component
     const { name } = value.devContent
 
+    // Resume download setup
     const { download } = useDownloader()
     const fileUrl = "/CV.pdf"
     const filename = "CV.pdf"
@@ -87,7 +88,6 @@ export default function Nav() {
                             Blog
                     </Link>
                 </li>
-                {/* Todo link to google pdf view of current resume */}
                 <li>
                     <Link
                         href=""
