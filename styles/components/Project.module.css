@@ -4,8 +4,7 @@
     overflow-x: hidden;
     border-radius: 1rem;
     text-align: center;
-    outline: 5px solid var(--primary-color);
-    box-shadow: 0px 4px 8px 5px var(--primary-color);
+    
 }
 
 .img {
@@ -79,4 +78,10 @@
 
 @media (min-width: 70em) {
 
+}
+
+/* * Hover */
+.project:hover{
+    border: 2px solid black;
+    box-shadow: 0px 4px 8px 5px black;
 }

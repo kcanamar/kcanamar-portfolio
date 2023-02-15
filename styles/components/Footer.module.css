@@ -27,7 +27,7 @@
 
 .copy {
     padding-top: 4rem;
-    font-size: clamp(.8rem, 1.5vw, 2rem);
+    font-size: clamp(.8rem, 1vw, 2rem);
     display: flex;
     justify-content: center;
     align-items: center;

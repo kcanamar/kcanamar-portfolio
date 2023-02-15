@@ -4,12 +4,17 @@ import { useDevContext } from "@/utils/devContext"
 import styles from "../styles/components/Nav.module.css"
 import { FiMenu } from "react-icons/fi"
 import { MdClose } from "react-icons/md"
+import useDownloader from "react-use-downloader"
 
 export default function Nav() {
     // desructure the value from context
     const { value } = useDevContext()
     // destructure property needed for component
     const { name } = value.devContent
+
+    const { download } = useDownloader()
+    const fileUrl = "/CV.pdf"
+    const filename = "CV.pdf"
 
     // Menu State
     const [showMenu, setShowMenu] = useState("false")
@@ -40,6 +45,15 @@ export default function Nav() {
                 className={styles.primaryNav}
                 data-visible={showMenu}
             >
+                <li>
+                    <Link
+                        href="/"
+                        onClick={() => LinkHandler()}
+
+                        >
+                            Home
+                    </Link>
+                </li>
                 <li>
                     <Link
                         href="/about"
@@ -77,7 +91,8 @@ export default function Nav() {
                 <li>
                     <Link
                         href=""
-                        // todo need a handler to close menu after download
+                        onClick={() => download(fileUrl, filename)}
+                        download
                         >
                             Resume
                     </Link>
