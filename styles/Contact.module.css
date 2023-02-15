@@ -1,0 +1,31 @@
+.section {
+    margin: 0 auto;
+    padding: 2rem;
+}
+.head {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 40em) {
+    .section {
+        width: var(--w-sm);
+    }
+
+}
+
+@media (min-width: 40em) and (max-width: 70em) {
+    .section {
+        width: var(--w-md);
+        padding-inline: 10vw;
+    }
+
+}
+
+@media (min-width: 70em) {
+    .section {
+        width: var(--w-lg);
+        padding-inline: 20vw;
+    }
+
+}

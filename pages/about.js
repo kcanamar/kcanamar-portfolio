@@ -5,19 +5,6 @@ import TalentInfo from '@/models/talent'
 import styles from "../styles/About.module.css"
 import { CldImage } from 'next-cloudinary'
 import Talent from '@/components/about/talent'
-import {
-    SiMongodb,
-    SiExpress,
-    SiNodedotjs,
-    SiReact,
-    SiHtml5,
-    SiJavascript,
-    SiCss3,
-    SiPostgresql,
-    SiNextdotjs,
-    SiPython,
-    SiDjango
-} from "react-icons/si"
 
 export default function About({ talents }) {
 
