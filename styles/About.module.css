@@ -30,7 +30,7 @@
 }
 
 .head {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: var(--primary-color);
 }
 
@@ -38,12 +38,33 @@
     margin: 1rem auto;
     padding: 2rem;
     text-align: left;
-    
 }
+
+.content {
+    font-size: 1.2rem;
+    letter-spacing: .03rem;
+}
+
+.big{
+    border-left: 10px solid var(--primary-alt);
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+.big:before{
+    color: var(--main-br-alt);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
 
 .subheading {
     margin: 2rem;
-    font-size: 3rem;
+    font-size: 3.4rem;
     color: var(--primary-alt);
 }
 
