@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
     align-items: center;
+    border: 2px solid green;
 }
 
 .img {
@@ -15,6 +16,7 @@
     justify-content: center;
     overflow: hidden;
     padding: 1rem;
+    border: 2px solid gold;
 }
 
 .img img {
@@ -103,6 +105,10 @@
 @media (max-width: 30em) {
     .talents {
         grid-template-columns: 1fr;
+    }
+
+    .subheading{
+        font-size: 2rem;
     }
 }
 
