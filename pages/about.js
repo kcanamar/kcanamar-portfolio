@@ -1,16 +1,17 @@
-import dbConnect from '@/utils/dbConnect'
-import AboutInfo from '@/models/about'
-import ProjectInfo from '@/models/project'
-import TalentInfo from '@/models/talent'
+// import dbConnect from '@/utils/dbConnect'
+// import AboutInfo from '@/models/about'
+// import ProjectInfo from '@/models/project'
+// import TalentInfo from '@/models/talent'
 import styles from "../styles/About.module.css"
 import { CldImage } from 'next-cloudinary'
 import Talent from '@/components/about/talent'
 import Layout from '@/components/Layout'
+import talents from "../components/about/talents.json"
 
-export default function About({ dev, talents }) {
+export default function About() {
 
     return (
-        <Layout dev={dev}>
+        <Layout >
             <section className={styles.section}>
                 <h1 className={styles.subheading}>About</h1>
                 <div className={styles.containerTop}>
@@ -90,18 +91,18 @@ export default function About({ dev, talents }) {
     )
 }
 
-export async function getServerSideProps() {
-    await dbConnect()
+// export async function getServerSideProps() {
+//     await dbConnect()
   
-    /* find all the data in our database */
-    const result = await AboutInfo.find({}).populate("projects")
-    const dev = JSON.parse(JSON.stringify(result[0]))
+//     /* find all the data in our database */
+//     const result = await AboutInfo.find({}).populate("projects")
+//     const dev = JSON.parse(JSON.stringify(result[0]))
 
-    const result2 = await ProjectInfo.find({}).populate("stack")
-    const projects = JSON.parse(JSON.stringify(result2))
+//     const result2 = await ProjectInfo.find({}).populate("stack")
+//     const projects = JSON.parse(JSON.stringify(result2))
 
-    const result3 = await TalentInfo.find({})
-    const talents = JSON.parse(JSON.stringify(result3))
+//     const result3 = await TalentInfo.find({})
+//     const talents = JSON.parse(JSON.stringify(result3))
   
-    return { props: { dev, projects, talents } }
-  }
+//     return { props: { dev, projects, talents } }
+//   }
