@@ -7,9 +7,7 @@ import {
     FaMailBulk
 } from "react-icons/fa"
 
-export default function Footer({dev}) {
-
-    const { git, linked, twitter} = dev
+export default function Footer() {
     
     return (
         <footer className={styles.footer}>
@@ -22,21 +20,21 @@ export default function Footer({dev}) {
                         <FaMailBulk/>
                 </Link>
                 <Link 
-                    href={git} 
+                    href="https://github.com/kcanamar"
                     rel="noopener noreferrer" 
                     target="_blank"
                     >
                         <FaGithub/>
                 </Link>
                 <Link 
-                    href={linked} 
+                    href="https://www.linkedin.com/in/kyle-canamar/"
                     rel="noopener noreferrer" 
                     target="_blank"
                     >
                         <FaLinkedinIn/>
                 </Link>
                 <Link 
-                    href={twitter} 
+                    href="https://twitter.com/funcy_koder"
                     rel="noopener noreferrer" 
                     target="_blank"
                     >

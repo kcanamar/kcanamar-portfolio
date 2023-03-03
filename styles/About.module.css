@@ -104,6 +104,10 @@
     .talents {
         grid-template-columns: 1fr;
     }
+
+    .subheading{
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 40em) and (max-width: 70em){

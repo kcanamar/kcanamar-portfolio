@@ -1,14 +1,14 @@
 import { BsArrowRight } from "react-icons/bs"
 import Link from "next/link"
-import Project from "./Project"
-import { useDevContext } from "@/utils/devContext"
+import Project from "./project/Project"
+import projects from "../components/project/projects.json"
 import styles from "../styles/components/Landing.module.css"
-import Card from "./Card"
+// import Card from "./Card"
 import Image from "next/image"
 import profilePic from "../public/pic.png"
 
-export default function Landing({dev}) {
-    const { projects } = dev
+export default function Landing() {
+
     return (
         <div className="landing">
             <section className={styles.section}>
@@ -21,19 +21,21 @@ export default function Landing({dev}) {
                         </div>
                         
                         <div className={styles.right}>
-                            <Image 
-                                src={profilePic}
-                                alt="Headshot of Kyle."
-                                height={500}
-                                width={550}
-                                placeholder="blur"
-                                priority
-                            />
+                            <div>
+                                <Image
+                                    src={profilePic}
+                                    alt="Headshot of Kyle."
+                                    height={500}
+                                    width={550}
+                                    placeholder="blur"
+                                    priority
+                                />
+                            </div>
                         </div>
                 </div>
             </section>
 
-            <section className={styles.section}>
+            {/* <section className={styles.section}>
                 <div className={styles.cards}>
                         <div className={styles.cardA}>
                             <Link href="/projects" >
@@ -51,7 +53,7 @@ export default function Landing({dev}) {
                             </Link>
                         </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className={styles.section}>
                 <div className={styles.containerBtm}>

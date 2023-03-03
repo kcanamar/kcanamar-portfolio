@@ -1,0 +1,90 @@
+[
+    {
+      "_id": "63ebca71eb8af8ca5d0d05d4",
+      "title": "MongoDB",
+      "desc": "Document Database, NoSQL, great for scaling based on usage",
+      "link": "https://www.mongodb.com/",
+      "icon": "SiMongodb",
+      "__v": 0
+    },
+    {
+      "_id": "63ebcad4eb8af8ca5d0d05d6",
+      "title": "Express.JS",
+      "desc": "Minimal and flexible web application framework to manage servers",
+      "link": "https://expressjs.com/",
+      "icon": "SiExpress",
+      "__v": 0
+    },
+    {
+      "_id": "63ebcbafeb8af8ca5d0d05d9",
+      "title": "Node.JS",
+      "desc": "A open-source JavaScript runtime to write both client and server code",
+      "link": "https://nodejs.org/en/",
+      "icon": "SiNodedotjs",
+      "__v": 0
+    },
+    {
+      "_id": "63ebcbafeb8af8ca5d0d05d8",
+      "title": "React",
+      "desc": "Library for building user interfaces with declarative code",
+      "link": "https://reactjs.org/",
+      "icon": "SiReact",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05dd",
+      "title": "HTML 5",
+      "desc": "Markup language used to create the frame of web content",
+      "link": "https://html.com/html5/",
+      "icon": "SiHtml5",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05dc",
+      "title": "JavaScript",
+      "desc": "Flexible interpreted language best known for breathing life into the DOM",
+      "link": "https://www.javascript.com/",
+      "icon": "SiJavascript",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05de",
+      "title": "CSS 3",
+      "desc": "Provides the style and dynamic layout structure to the website",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "icon": "SiCss3",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05e1",
+      "title": "PostgreSQL",
+      "desc": "An open source relational database harnessing the SQL language.",
+      "link": "https://www.postgresql.org/",
+      "icon": "SiPostgresql",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05e2",
+      "title": "Next.JS",
+      "desc": "A React framework used to build full-stack apps",
+      "link": "https://nextjs.org/",
+      "icon": "SiNextdotjs",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05df",
+      "title": "Python",
+      "desc": "Interpreted OOP language used for websites, software, data analysis, and more.",
+      "link": "https://www.python.org/",
+      "icon": "SiPython",
+      "__v": 0
+    },
+    {
+      "_id": "63ebd266eb8af8ca5d0d05e0",
+      "title": "Django",
+      "desc": "Full-stack framework used for rapid website prototyping.",
+      "link": "https://www.djangoproject.com/",
+      "icon": "SiDjango",
+      "__v": 0
+    }
+  ]

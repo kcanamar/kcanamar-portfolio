@@ -1,15 +1,16 @@
-import dbConnect from '@/utils/dbConnect'
-import AboutInfo from '@/models/about'
-import ProjectInfo from '@/models/project'
-import TalentInfo from '@/models/talent'
-import Project from '@/components/Project'
+// import dbConnect from '@/utils/dbConnect'
+// import AboutInfo from '@/models/about'
+// import ProjectInfo from '@/models/project'
+// import TalentInfo from '@/models/talent'
+import Project from '@/components/project/Project'
 import styles from '../styles/Projects.module.css'
 import Layout from '@/components/Layout'
+import projects from "../components/project/projects.json"
 
-export default function Projects({ projects, dev }) {
-
+export default function Projects() {
+    
     return (
-        <Layout dev={dev}>
+        <Layout>
             <section className={styles.section}>
                 <div className={styles.container}>
                     <h1 className={styles.subHead}>Projects Gallery</h1>
@@ -26,18 +27,18 @@ export default function Projects({ projects, dev }) {
     )
 }
 
-export async function getServerSideProps() {
-    await dbConnect()
+// export async function getServerSideProps() {
+//     await dbConnect()
   
-    /* find all the data in our database */
-    const result = await AboutInfo.find({}).populate("projects")
-    const dev = JSON.parse(JSON.stringify(result[0]))
+//     /* find all the data in our database */
+//     const result = await AboutInfo.find({}).populate("projects")
+//     const dev = JSON.parse(JSON.stringify(result[0]))
 
-    const result2 = await ProjectInfo.find({}).populate("stack")
-    const projects = JSON.parse(JSON.stringify(result2))
+//     const result2 = await ProjectInfo.find({}).populate("stack")
+//     const projects = JSON.parse(JSON.stringify(result2))
 
-    const result3 = await TalentInfo.find({})
-    const talents = JSON.parse(JSON.stringify(result3))
+//     const result3 = await TalentInfo.find({})
+//     const talents = JSON.parse(JSON.stringify(result3))
   
-    return { props: { dev, projects, talents } }
-  }
+//     return { props: {} }
+//   }

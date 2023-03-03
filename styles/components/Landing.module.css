@@ -6,6 +6,7 @@
 .containerTop {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
 
 .left {
@@ -16,7 +17,8 @@
 }
 
 .right {
-    text-align: center;
+    justify-items: center;
+    align-items: center;
     padding: 1rem;
 }
 
