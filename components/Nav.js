@@ -5,9 +5,8 @@ import { FiMenu } from "react-icons/fi"
 import { MdClose } from "react-icons/md"
 import useDownloader from "react-use-downloader"
 
-export default function Nav({dev}) {
+export default function Nav() {
 
-    const { name } = dev
     // Resume download setup
     const { download } = useDownloader()
     const fileUrl = "/CV.pdf"
@@ -25,7 +24,7 @@ export default function Nav({dev}) {
                 <Link 
                     href="/"
                     >
-                        {name}
+                        KCanamar
                 </Link>
             </div>
 
