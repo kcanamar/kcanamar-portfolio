@@ -2,14 +2,15 @@ import dbConnect from '@/utils/dbConnect'
 import AboutInfo from '@/models/about'
 import ProjectInfo from '@/models/project'
 import TalentInfo from '@/models/talent'
-import Project from '@/components/Project'
+import Project from '@/components/project/Project'
 import styles from '../styles/Projects.module.css'
 import Layout from '@/components/Layout'
+import projects from "../components/project/projects.json"
 
-export default function Projects({ projects, dev }) {
-
+export default function Projects() {
+    
     return (
-        <Layout dev={dev}>
+        <Layout>
             <section className={styles.section}>
                 <div className={styles.container}>
                     <h1 className={styles.subHead}>Projects Gallery</h1>
@@ -39,5 +40,5 @@ export async function getServerSideProps() {
     const result3 = await TalentInfo.find({})
     const talents = JSON.parse(JSON.stringify(result3))
   
-    return { props: { dev, projects, talents } }
+    return { props: {} }
   }

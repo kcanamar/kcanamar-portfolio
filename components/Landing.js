@@ -1,6 +1,6 @@
 import { BsArrowRight } from "react-icons/bs"
 import Link from "next/link"
-import Project from "./Project"
+import Project from "./project/Project"
 import { useDevContext } from "@/utils/devContext"
 import styles from "../styles/components/Landing.module.css"
 import Card from "./Card"
