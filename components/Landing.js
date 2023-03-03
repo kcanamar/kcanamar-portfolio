@@ -21,14 +21,16 @@ export default function Landing() {
                         </div>
                         
                         <div className={styles.right}>
-                            <Image 
-                                src={profilePic}
-                                alt="Headshot of Kyle."
-                                height={500}
-                                width={550}
-                                placeholder="blur"
-                                priority
-                            />
+                            <div>
+                                <Image
+                                    src={profilePic}
+                                    alt="Headshot of Kyle."
+                                    height={500}
+                                    width={550}
+                                    placeholder="blur"
+                                    priority
+                                />
+                            </div>
                         </div>
                 </div>
             </section>
