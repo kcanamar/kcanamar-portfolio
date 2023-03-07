@@ -5,6 +5,7 @@
           "name": "Janus",
           "live": "https://capstone-ga.vercel.app/",
           "git": "https://github.com/kcanamar/capstone-ga",
+          "desc": "A time management solution, for planning out quarterly goals. Utilizing S.M.A.R.T. goal principlas to take the stress out of planning for the future.",
           "__v": 0,
           "stack": [
             "Next.js",
@@ -19,6 +20,7 @@
           "name": "Elevar",
           "live": "https://elevarcrm.herokuapp.com/",
           "git": "https://github.com/SunghunP/elevar_crm",
+          "desc": "A product focused CRM, where businesses can manage where their products are being sold and tracks the primary contacts.",
           "__v": 0,
           "stack": [
             "Django",
@@ -35,6 +37,7 @@
           ],
           "_id": "63d35331e89d61a89ff3797b",
           "image": "https://raw.githubusercontent.com/Isyates/pwnterest-project3-frontend/main/public/Main.png",
+          "desc": "A fun fresh space for gamers to share thier favorite memes of vintage games. Come visit and share a laugh.",
           "name": "Pwntrest",
           "live": "https://pwnterest.netlify.app/",
           "git": "https://github.com/Isyates/pwnterest-project3-frontend",
@@ -44,6 +47,7 @@
           "_id": "63d92c6fd206c8e13445ba42",
           "image": "https://raw.githubusercontent.com/kcanamar/cannanote/main/public/screenshots/feed.png",
           "name": "CannaNote",
+          "desc": "A social space for medicinal and recreational cannabis consumers to share their experiences. As the plant has many different genetics along with a varitey of consumption methods, this creates the perfect blend of circumstances leading to a wide range of effects.",
           "live": "https://karc-cannanote.herokuapp.com/",
           "git": "https://github.com/kcanamar/cannanote",
           "stack": [
