@@ -9,8 +9,8 @@ export default function Nav() {
 
     // Resume download setup
     const { download } = useDownloader()
-    const fileUrl = "/CV.pdf"
-    const filename = "CV.pdf"
+    const fileUrl = "/Kyle_Canamar_Resume.pdf"
+    const filename = "Kyle_Canamar_Resume.pdf"
 
     // Menu State
     const [showMenu, setShowMenu] = useState("false")
